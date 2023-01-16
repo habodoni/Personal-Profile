@@ -94,7 +94,7 @@ nav ul li a:hover::after{
 }
 
 .about-col-1{
-    flex-basis: 35%;
+    flex-basis: 25%;
 }
 
 .about-col-1 img{
@@ -103,17 +103,20 @@ nav ul li a:hover::after{
 }
 
 .about-col-2 {
-    flex-basis: 60%;
+    flex-basis: 70%;
 }
 
 .sub-title{
+    text-align: left;
+    padding-bottom: 15px;
     font-style: sans-serif;
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 450;
     color: rgb(134, 86, 86);
 }
 
 .sub-title-2{
+    text-align: left;
     color: #fff;
     font-size: 18px;
     font-weight: 200;
@@ -122,6 +125,7 @@ nav ul li a:hover::after{
 }
 
 .tab-titles{
+    text-align: left;
     color: #fff;
     display: flex;
     margin: 20px 0 40px;
