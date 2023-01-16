@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ac94c0dcc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/newlogo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineering Student</p>
+            <h1>Hi, my name is <span>Hazem.</span> <br> I am an Aspiring<br> Software Developer</h1>
+        </div>
+    </div>
+</div>
+<!-------------------------about------------------->
+<div id="about">
+    <div class="comntainer">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aboutt.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me </h1>
+                <p class="sub-title-2">
+                    I am currently a freshman at Stevens Institute of Technology. I have experience with both Python and Java, including
+                    their implementations in data visualization. I am AutoCAD Certified, ACI (American Concrete Institute) Certified, and
+                    CST (Certified Surveying Technician) Certified. Throughout high school I was a part of the Varsity Football Team as well
+                    as the Varsity Track and Field team. I am interested in gaining experience in the field of software engineering and development
+                    in the New York Metropolitan Area.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Autodesk</span><br>AutoCAD Certified</li>
+                        <li><span>Program Developer</span><br>Mobile and Web Development</li>
+                        <li><span>Visualization</span><br>Data Sorting and Graphing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>University Settlement Society of New York - Group Leader</span><br>July 2022 - August 2022</li>
+                        <li><span>University of Pennsylvania - Student Programmer</span><br>June 2021 - August 2021</li>
+                        <li><span>ACE Greater New York - HVAC Systems Lead Director/Designer</span><br>October 2020 - June 2021</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Stevens Institute of Technology - Software Engineering Student</span><br>2022 - Current</li>
+                        <li><span>Brooklyn Technical High School - Civil Engineering Major</span><br>2018 - 2022</li>                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------PORTFOLIO---------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>    
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>bakabaka</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Social</h3>
+                    <p>superduperbakabaka</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Web App</h3>
+                    <p>superbakabaka</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>   
+        <a href="#" class="btn">See More</a> 
+    </div>
+</div>
+
+<!------------------CONTACT-------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i> habodoni@stevens.edu</p>
+                <p><i class="fa-solid fa-phone"></i> (929)-327-6812</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hazem-abo-donia-51b8ba238/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>    
+                </div>
+                <a href="images/2023-resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p class="">Copyright © Hazem Abo-Donia</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxyvhy3fff7ASZpQfJ0JTvJ2QWliE-jrw1MU9ipTMS_u3TfEGklGd9MhuSLestma6nFoQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+
+</body>
+
+</html>
